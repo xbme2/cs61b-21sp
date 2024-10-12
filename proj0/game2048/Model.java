@@ -115,7 +115,7 @@ public class Model extends Observable {
         // changed local variable to true.
         board.setViewingPerspective(side);
         for (int col = 0; col < board.size(); col++) {
-            changed = changed || tiltInCol(col);
+            changed = tiltInCol(col) || changed  ;
         }
         board.setViewingPerspective(Side.NORTH);
         checkGameOver();
